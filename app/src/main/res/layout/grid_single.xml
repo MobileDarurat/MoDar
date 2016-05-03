@@ -3,22 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="5dp"
-    android:orientation="vertical">
+    android:paddingLeft="5dp"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/btnGrid"
-        android:background="@drawable/button_bg_round"/>
+        android:background="@drawable/button_bg_round"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/txtGrid"
-        android:paddingLeft="25dp"
-        android:paddingTop="10dp"/>
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
 </LinearLayout>
