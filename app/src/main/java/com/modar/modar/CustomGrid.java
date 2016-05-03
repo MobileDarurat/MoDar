@@ -7,7 +7,6 @@ package com.modar.modar;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +18,13 @@ public class CustomGrid extends BaseAdapter {
     private Context mContext;
     private final int[] init;
     private final String[] name;
+    private final int[] notelp;
 
-    public CustomGrid(Context c, int[] init, String[] name) {
+    public CustomGrid(Context c, int[] init, String[] name, int[] notelp) {
         mContext = c;
         this.init = init;
         this.name = name;
+        this.notelp = notelp;
     }
 
     @Override
@@ -45,7 +46,7 @@ public class CustomGrid extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         // TODO Auto-generated method stub
         View grid;
 
@@ -63,9 +64,9 @@ public class CustomGrid extends BaseAdapter {
 
                 @Override
                 public void onClick(View v) {
-                    Log.d("Modar", "PLEASE BISA DONK");
+                    //Log.d("Modar", "PLEASE BISA DONK");
                     Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
-                    phoneIntent.setData(Uri.parse("tel:087887978259"));
+                    phoneIntent.setData(Uri.parse("tel:" + notelp[position]));
 //                    if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 //                        // TODO: Consider calling
 //                        //    ActivityCompat#requestPermissions

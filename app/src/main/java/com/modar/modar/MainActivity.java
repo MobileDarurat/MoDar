@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
             "PLN",
             "Polisi"
     } ;
+
     int[] init = {
             R.mipmap.ic_1,
             R.mipmap.ic_2,
@@ -21,6 +22,15 @@ public class MainActivity extends AppCompatActivity {
             R.mipmap.ic_4,
             R.mipmap.ic_5,
             R.mipmap.ic_6
+    } ;
+
+    int[] notelp = {
+            R.string.no_1,
+            R.string.no_2,
+            R.string.no_3,
+            R.string.no_4,
+            R.string.no_5,
+            R.string.no_6
     } ;
 
     @Override
@@ -31,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        CustomGrid adapter = new CustomGrid(MainActivity.this, init, name);
+        CustomGrid adapter = new CustomGrid(MainActivity.this, init, name, notelp);
         GridView gridViewModar = (GridView)findViewById(R.id.gridModar);
 
         gridViewModar.setAdapter(adapter);
