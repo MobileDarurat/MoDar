@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Modar</string>
+
+    <!-- Nomor Utama Modar !-->
+    <string name="no_1">118</string>
+    <string name="no_2">+622180880123</string>
+    <string name="no_3">113</string>
+    <string name="no_4">+62215704250</string>
+    <string name="no_5">123</string>
+    <string name="no_6">110</string>
 </resources>
