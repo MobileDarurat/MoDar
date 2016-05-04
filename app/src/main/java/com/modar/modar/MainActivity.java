@@ -2,6 +2,7 @@ package com.modar.modar;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
@@ -49,8 +50,14 @@ public class MainActivity extends AppCompatActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        //ask for permission
-        getPermissionDialPhone();
+        //ask for permission if your phone is marshmallow
+        if(Build.VERSION.SDK_INT == 23) {
+            getPermissionDialPhone();
+        }
+        else {
+            //do something here
+        }
+
 
         CustomGrid adapter = new CustomGrid(MainActivity.this, init, name, notelp);
         GridView gridViewModar = (GridView)findViewById(R.id.gridModar);
