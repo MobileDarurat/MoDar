@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Modar</string>
+    <string name="about_us">About Us</string>
+    <string name="data_desc">Modar adalah aplikasi yang bertujuan untuk melakukan panggilan darurat dengan cepat.
+                            Modar dibentuk dalam acara ICT Training 2016 yang dipandu oleh JERU, dan diselenggarakan
+                            oleh Kominfo dan HUAWEI.</string>
 
     <!-- Nomor Utama Modar !-->
     <string name="no_1">118</string>
